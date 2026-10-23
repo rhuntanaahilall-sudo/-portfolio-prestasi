@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090612">
+<title>Hilall Rhuntanaa Akmail | Portofolio</title>
+
+<style>
+:root {
+  --bg: #090612;
+  --panel: #151022;
+  --purple: #a855f7;
+  --light-purple: #d8b4fe;
+  --pink: #ec4899;
+  --text: #f7f2ff;
+  --muted: #b9adc9;
+  --border: rgba(192,132,252,.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top right, #351052 0%, transparent 38%),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1050px, 90%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  color: var(--purple);
+}
+
+.nav-label {
+  border: 1px solid var(--border);
+  color: var(--light-purple);
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: .75rem;
+}
+
+/* HERO */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr .75fr;
+  gap: 45px;
+  align-items: center;
+  padding: 65px 0 85px;
+}
+
+.eyebrow {
+  color: var(--light-purple);
+  font-size: .75rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin: 18px 0;
+  overflow-wrap: anywhere;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--purple);
+}
+
+.hero-description {
+  color: var(--muted);
+  max-width: 550px;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.button {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #a855f7, #6d28d9);
+}
+
+.button-secondary {
+  border: 1px solid var(--border);
+}
+
+/* PROFILE PHOTO */
+
+.profile-area {
+  width: 100%;
+  max-width: 320px;
+  justify-self: center;
+}
+
+.profile-frame {
+  width: 100%;
+  padding: 8px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #c084fc, #6d28d9, #ec4899);
+  box-shadow: 0 0 45px #9333ea30;
+  transform: none;
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 17px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #25133f, #10091d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light-purple);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-placeholder {
+  padding: 20px;
+}
+
+.photo-placeholder .emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.photo-placeholder small {
+  color: var(--muted);
+  display: block;
+  margin-top: 8px;
+}
+
+/* SLOGAN - LURUS, TANPA KOTAK MENGAMBANG */
+
+.slogan {
+  text-align: center;
+  margin-top: 15px;
+  padding: 13px 8px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: #170d25;
+  color: var(--light-purple);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  transform: none;
+}
+
+/* SECTION */
+
+section {
+  padding: 55px 0;
+}
+
+.section-label {
+  color: var(--purple);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.2;
+  margin: 10px 0;
+  letter-spacing: -1px;
+}
+
+.section-description {
+  color: var(--muted);
+  max-width: 650px;
+  margin-bottom: 25px;
+}
+
+/* ACHIEVEMENT */
+
+.achievement {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 25px;
+  align-items: center;
+  background: linear-gradient(135deg, #1b102b, #100b19);
+  border: 1px solid var(--border);
+  border-radius: 23px;
+  padding: 22px;
+}
+
+.achievement-photo {
+  min-height: 260px;
+  border-radius: 16px;
+  background: radial-gradient(circle, #552180, #10091b 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: var(--light-purple);
+}
+
+.achievement-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.achievement-placeholder {
+  padding: 20px;
+}
+
+.trophy {
+  display: block;
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 5px 11px;
+  color: var(--light-purple);
+  font-size: .72rem;
+  font-weight: bold;
+}
+
+.achievement h3 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.25;
+  margin: 15px 0 10px;
+}
+
+.achievement p {
+  color: var(--muted);
+}
+
+.quote {
+  margin-top: 18px;
+  padding: 14px;
+  border-left: 3px solid var(--purple);
+  background: #a855f70d;
+  border-radius: 0 10px 10px 0;
+  color: #eadcff;
+  font-weight: bold;
+}
+
+/* MOTIVATION */
+
+.motivation {
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #1d1030, #110a1c);
+  border-radius: 22px;
+  padding: 30px;
+  text-align: center;
+}
+
+.motivation blockquote {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  line-height: 1.5;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.motivation p {
+  color: var(--muted);
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.gallery-card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+.gallery-photo {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #24123d, #10091b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light-purple);
+  overflow: hidden;
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-placeholder {
+  padding: 15px;
+}
+
+.gallery-caption {
+  padding: 13px;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 25px;
+  padding: 25px 0 35px;
+  border-top: 1px solid #ffffff15;
+  color: #a99ab8;
+  font-size: .8rem;
+  text-align: center;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 35px 0 45px;
+  }
+
+  .hero-copy {
+    order: 0;
+  }
+
+  .profile-area {
+    order: 1;
+    max-width: 220px;
+    justify-self: start;
+    margin-left: 5px;
+  }
+
+  .profile-photo {
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+
+  .hero-description {
+    font-size: .95rem;
+  }
+
+  .achievement {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .achievement-photo {
+    min-height: 210px;
+  }
+
+  .achievement-photo img {
+    min-height: 210px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 38px 0;
+  }
+
+  .nav-label {
+    font-size: .65rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="container">
+  <nav>
+    <a href="#" class="logo">HRA<span>.</span></a>
+    <span class="nav-label">PORTOFOLIO PRESTASI</span>
+  </nav>
+</header>
+
+<main>
+
+<!-- HALAMAN UTAMA -->
+<div class="container hero">
+
+  <div class="hero-copy">
+    <div class="eyebrow">Perjalanan • Prestasi • Masa depan</div>
+
+    <h1>
+      Hilall Rhuntanaa
+      <span>Akmail.</span>
+    </h1>
+
+    <p class="hero-description">
+      Satu pencapaian, seribu alasan untuk terus berkembang.
+      Setiap kesempatan adalah ruang untuk belajar, berani mencoba,
+      dan melangkah menuju cita-cita.
+    </p>
+
+    <div class="buttons">
+      <a href="#prestasi" class="button button-primary">Lihat Prestasi ↗</a>
+      <a href="#tentang" class="button button-secondary">Tentang Aku</a>
+    </div>
+  </div>
+
+  <div class="profile-area">
+    <div class="profile-frame">
+      <div class="profile-photo">
+        <img
+          src="foto-profil.jpg"
+          alt="Foto profil Hilall Rhuntanaa Akmail"
+          onerror="this.remove(); this.parentElement.querySelector('.photo-placeholder').hidden=false;"
+        >
+        <div class="photo-placeholder" hidden>
+          <span class="emoji">📸</span>
+          <strong>Foto Profil</strong>
+          <small>Unggah foto dengan nama foto-profil.jpg</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="slogan">DREAM. ACHIEVE. INSPIRE.</div>
+  </div>
+
+</div>
+
+<!-- PRESTASI UTAMA -->
+<section class="container" id="prestasi">
+  <div class="section-label">01 / Prestasi unggulan</div>
+  <h2 class="section-title">Satu pencapaian yang berarti.</h2>
+  <p class="section-description">
+    Pengalaman berharga untuk belajar, berkembang, dan melangkah lebih jauh.
+  </p>
+
+  <article class="achievement">
+    <div class="achievement-photo">
+      <img
+        src="foto-prestasi.jpg"
+        alt="Foto prestasi Indonesia Open"
+        onerror="this.remove(); this.parentElement.querySelector('.achievement-placeholder').hidden=false;"
+      >
+      <div class="achievement-placeholder" hidden>
+        <span class="trophy">🏆</span>
+        <strong>Indonesia Open</strong>
+        <p>Tambahkan foto sertifikat atau momen prestasi.</p>
+      </div>
+    </div>
+
+    <div>
+      <span class="pill">PRESTASI PILIHAN</span>
+      <h3>Presentasi Internasional — Indonesia Open</h3>
+      <p>
+        Sebuah pengalaman berharga untuk mengembangkan kemampuan presentasi,
+        memperluas wawasan, dan membangun keberanian untuk terus belajar.
+      </p>
+
+      <div class="quote">
+        “Kesempatan besar dimulai dari keberanian untuk melangkah.”
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- TENTANG AKU -->
+<section class="container" id="tentang">
+  <div class="section-label">02 / Tentang aku</div>
+  <h2 class="section-title">Berani mencoba. Terus berkembang.</h2>
+
+  <p class="section-description">
+    Aku percaya bahwa proses belajar, konsistensi, dan keberanian
+    mencoba hal baru adalah bagian penting dari setiap pencapaian.
+  </p>
+
+  <div class="motivation">
+    <div class="section-label">Pegangan hidup</div>
+
+    <blockquote>
+      “Jangan takut bermimpi besar. Terus belajar, berani melangkah,
+      dan biarkan usaha membuktikan kemampuanmu.”
+    </blockquote>
+
+    <p>
+      Prestasi bukan akhir dari perjalanan, melainkan motivasi
+      untuk menjadi lebih baik dari hari kemarin.
+    </p>
+  </div>
+</section>
+
+<!-- GALERI FOTO -->
+<section class="container" id="galeri">
+  <div class="section-label">03 / Galeri foto</div>
+  <h2 class="section-title">Momen yang berharga.</h2>
+  <p class="section-description">
+    Foto-foto yang menyimpan kenangan dan perjalanan prestasi.
+  </p>
+
+  <div class="gallery">
+
+    <div class="gallery-card">
+      <div class="gallery-photo">
+        <img
+          src="foto-prestasi.jpg"
+          alt="Foto prestasi"
+          onerror="this.remove(); this.parentElement.querySelector('.gallery-placeholder').hidden=false;"
+        >
+        <div class="gallery-placeholder" hidden>
+          🏅<br>Tambahkan foto prestasi
+        </div>
+      </div>
+      <div class="gallery-caption">Indonesia Open</div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-photo">
+        <img
+          src="foto-kegiatan.jpg"
+          alt="Foto kegiatan"
+          onerror="this.remove(); this.parentElement.querySelector('.gallery-placeholder').hidden=false;"
+        >
+        <div class="gallery-placeholder" hidden>
+          📷<br>Tambahkan foto kegiatan
+        </div>
+      </div>
+      <div class="gallery-caption">Perjalanan dan pengalaman</div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Hilall Rhuntanaa Akmail · DREAM. ACHIEVE. INSPIRE. 💜
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
